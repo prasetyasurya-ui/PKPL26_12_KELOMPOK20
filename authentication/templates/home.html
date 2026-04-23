@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | TokoLaku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900" style="font-family: 'Manrope', sans-serif;">
+    <main class="mx-auto flex min-h-screen w-full max-w-3xl items-center px-4 py-10">
+        <section class="w-full rounded-3xl bg-white p-7 shadow-sm ring-1 ring-slate-200 sm:p-9">
+            <p class="inline-flex items-center rounded-full bg-cyan-100 px-4 py-1 text-xs font-bold uppercase tracking-[0.16em] text-cyan-700">Auth Showcase</p>
+            <h1 class="mt-4 text-3xl font-extrabold text-slate-900">Dashboard</h1>
+
+            <div class="mt-5 space-y-2 text-sm text-slate-700">
+                <p>Login berhasil sebagai <strong>{{ request.user.username }}</strong>.</p>
+                <p>Peran aktif: <strong>{{ role_label }}</strong>.</p>
+            </div>
+
+            <div class="mt-7 flex flex-wrap gap-3">
+                <a href="/" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-cyan-500 hover:text-cyan-700">Kembali ke Home</a>
+                <form method="POST" action="{% url 'logout' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="rounded-xl bg-cyan-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-cyan-700">Logout</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

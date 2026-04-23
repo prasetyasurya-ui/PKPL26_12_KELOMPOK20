@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TokoLaku</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#ecfeff',
+                            100: '#cffafe',
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490'
+                        },
+                        accent: {
+                            500: '#f97316',
+                            600: '#ea580c'
+                        }
+                    },
+                    boxShadow: {
+                        soft: '0 18px 40px -16px rgba(8, 145, 178, 0.30)'
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-slate-50 text-slate-900" style="font-family: 'Manrope', sans-serif;">
+    <div class="min-h-screen">
+        <header class="mx-auto flex w-full max-w-4xl items-center justify-between px-6 py-6">
+            <a href="/" class="text-2xl font-extrabold tracking-tight text-slate-900">TokoLaku</a>
+            <div class="flex items-center gap-3">
+                <a href="/auth/login/" class="rounded-xl border border-slate-300 px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-brand-500 hover:text-brand-700">Login</a>
+                <a href="/auth/register/" class="rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-soft transition hover:bg-brand-700">Daftar</a>
+            </div>
+        </header>
+
+        <main class="mx-auto w-full max-w-4xl px-6 pb-16 pt-6">
+        </main>
+    </div>
+</body>
+</html>
