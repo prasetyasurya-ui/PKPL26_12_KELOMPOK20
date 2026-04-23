@@ -1,7 +1,7 @@
-# TokoLaku Auth Module
+# TokoLaku
 
-Modul ini adalah bagian autentikasi untuk skenario E-Commerce Marketplace.
-Fokus utama repo saat ini adalah secure authentication flow dan role pengguna sesuai kebutuhan tugas.
+Repo ini adalah perwujudan secure coding practice skenario E-Commerce Marketplace.
+
 
 ## Ringkasan Fitur Saat Ini
 
@@ -9,11 +9,6 @@ Fokus utama repo saat ini adalah secure authentication flow dan role pengguna se
 - Mitigasi brute-force login menggunakan lockout per kombinasi username + IP.
 - Session hardening menggunakan rotasi session key dan token sesi unik.
 - Least privilege pada akun baru.
-- Role e-commerce pada sisi auth:
-    - Pembeli
-    - Penjual
-    - Kurir
-- Dashboard auth sederhana yang menampilkan username dan role aktif.
 
 ## Struktur Penting
 
