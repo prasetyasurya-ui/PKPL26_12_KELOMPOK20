@@ -1,0 +1,10 @@
+# Virtual Environments
+env/
+venv/
+
+# Python Byte-compiled files
+__pycache__/
+*.pyc
+
+# Local Database
+db.sqlite3
